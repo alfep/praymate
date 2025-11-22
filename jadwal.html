@@ -7,8 +7,8 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>PrayMate - Jadwal Sholat Hari Ini</title>
-  <link rel="stylesheet" href="css/style.css?v=1.0.0">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="manifest" href="./manifest.webmanifest">
   <script>
     // Apply theme IMMEDIATELY before render (no blink)
     (function() {
@@ -21,7 +21,7 @@
 </head>
 <body>
   <header>
-    <a href="index.html" class="btn-back-home" title="Kembali ke Beranda">🏠</a>
+    <a href="./index.html" class="btn-back-home" title="Kembali ke Beranda">🏠</a>
     <button class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
       <span id="theme-icon">🌙</span>
     </button>
@@ -34,7 +34,7 @@
       <h2 id="location-name">Lokasi: -</h2>
       <p id="date-today">Tanggal: -</p>
       <p style="font-size: 12px; color: #666; margin-top: 8px;">
-        💡 Tip: Ubah metode perhitungan di <a href="settings.html" style="color: #13837c;">Pengaturan</a>
+        💡 Tip: Ubah metode perhitungan di <a href="./settings.html" style="color: #13837c;">Pengaturan</a>
       </p>
     </section>
 
@@ -130,10 +130,10 @@
   </main>
 
   <!-- PENTING: urutannya prayerApi dulu baru app.js -->
-  <script src="js/theme.js?v=1.0.0"></script>
-  <script src="js/prayerApi.js?v=1.0.0"></script>
-  <script src="js/app.js?v=1.0.0"></script>
-  <script src="js/islamic-features.js?v=1.0.0"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/prayerApi.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/islamic-features.js"></script>
   <script>
 (function() {
     const isDev = location.hostname === "localhost" || location.hostname === "127.0.0.1";

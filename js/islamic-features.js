@@ -12,12 +12,12 @@
     // Initialize audio
     init() {
       try {
-        this.audio = new Audio('assets/audio/adhan_short.mp3');
+        this.audio = new Audio('./assets/audio/adhan_short.mp3');
         this.audio.volume = 0.6; // Volume default 60%
         
         // Handle error jika file tidak ditemukan
         this.audio.onerror = () => {
-          console.warn('File audio adzan tidak ditemukan. Letakkan file di assets/audio/adhan_short.mp3');
+          console.warn('File audio adzan tidak ditemukan. Letakkan file di ./assets/audio/adhan_short.mp3');
         };
       } catch (error) {
         console.error('Error initializing adzan audio:', error);
@@ -78,8 +78,8 @@
       
       const notification = new Notification(title, {
         body: body,
-        icon: 'icons/icon-192.png',
-        badge: 'icons/icon-192.png',
+        icon: './icons/icon-192.png',
+        badge: './icons/icon-192.png',
         tag: 'prayer-time-' + prayerName,
         requireInteraction: true,
         silent: false

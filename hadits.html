@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>Hadits Shahih - PrayMate</title>
-  <link rel="stylesheet" href="css/style.css?v=1.0.0">
+  <link rel="stylesheet" href="./css/style.css">
   <script>
     (function() {
       const theme = localStorage.getItem('praymate_theme');
@@ -19,7 +19,7 @@
 </head>
 <body class="hadits-page">
   <header>
-    <a href="index.html" class="btn-back-home" title="Kembali ke Beranda">🏠</a>
+    <a href="./index.html" class="btn-back-home" title="Kembali ke Beranda">🏠</a>
     <button class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
       <span id="theme-icon">🌙</span>
     </button>
@@ -31,7 +31,7 @@
     <section class="card">
       <h2>📚 Daftar Kategori Hadits</h2>
       <p>Pilih kategori untuk melihat hadits-hadits shahih di dalamnya.</p>
-      <input type="text" id="search-hadits" placeholder="Cari kategori..." class="input-text">
+      <input type="text" id="search-hadits" placeholder="Cari kategori..." class="input-text" style="text-align:center;">
       <div class="hadits-list" id="hadits-list"></div>
     </section>
   </main>
@@ -40,9 +40,9 @@
     © PrayMate 2025 — Bantu ibadahmu setiap hari 🤲
   </footer>
 
-  <script src="js/theme.js?v=1.0.0"></script>
-  <script src="js/haditsData.js?v=1.0.0"></script>
-  <script src="js/app.js?v=1.0.0"></script>
+  <script src="./js/theme.js"></script>
+  <script src="./js/haditsData.js"></script>
+  <script src="./js/app.js"></script>
   <script>
 (function() {
     const isDev = location.hostname === "localhost" || location.hostname === "127.0.0.1";
