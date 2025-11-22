@@ -1,17 +1,30 @@
-const CACHE_NAME = 'praymate-v1';
+const CACHE_NAME = 'praymate-v2';
+const BASE = '/praymate-app';
 const urlsToCache = [
-  './',
-  './index.html',
-  './jadwal.html',
-  './quran.html',
-  './settings.html',
-  './doa.html',
-  './css/style.css',
-  './js/app.js',
-  './js/theme.js',
-  './js/prayerApi.js',
-  './js/quranApi.js',
-  './js/doaData.js'
+  `${BASE}/`,
+  `${BASE}/index.html`,
+  `${BASE}/jadwal.html`,
+  `${BASE}/quran.html`,
+  `${BASE}/settings.html`,
+  `${BASE}/doa.html`,
+  `${BASE}/hadits.html`,
+  `${BASE}/asmaul-husna.html`,
+  `${BASE}/dzikir.html`,
+  `${BASE}/kiblat.html`,
+  `${BASE}/zakat.html`,
+  `${BASE}/kalender.html`,
+  `${BASE}/panduan-sholat.html`,
+  `${BASE}/css/style.css`,
+  `${BASE}/js/app.js`,
+  `${BASE}/js/theme.js`,
+  `${BASE}/js/prayerApi.js`,
+  `${BASE}/js/quranApi.js`,
+  `${BASE}/js/doaData.js`,
+  `${BASE}/js/haditsData.js`,
+  `${BASE}/js/asmaulHusnaData.js`,
+  `${BASE}/js/islamic-features.js`,
+  `${BASE}/js/panduanSholatData.js`,
+  `${BASE}/manifest.webmanifest`
 ];
 
 self.addEventListener('install', event => {
