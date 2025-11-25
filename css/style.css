@@ -275,6 +275,15 @@ header p {
   margin: 0 auto;
 }
 
+/* Desktop: 2 kolom untuk layout yang seimbang */
+@media (min-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    gap: 24px;
+  }
+}
+
 .menu-card {
   background: var(--bg-card);
   backdrop-filter: blur(20px);
@@ -1306,6 +1315,21 @@ code {
 
 .zakat-tab-content.active, .panduan-tab-content.active {
   display: block;
+}
+
+/* ===== CONTAINER JADWAL ===== */
+.container {
+  padding: 24px 16px;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 32px 24px;
+  }
 }
 
 /* ===== RESPONSIVE ===== */
