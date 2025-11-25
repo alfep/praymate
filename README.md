@@ -70,4 +70,4 @@ Klik kanan → Open with Live Server
 bash
 Copy code
 python -m http.server 8000
-# Buka http://localhost:8000/
+# Buka http://localhost:8000/ 
