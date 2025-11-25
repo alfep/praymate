@@ -24,8 +24,10 @@ html {
 
 body {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* GPU Acceleration untuk elemen yang di-animate */
@@ -160,7 +162,7 @@ header::after {
 
 header h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 1.75rem;
   font-weight: 700;
   color: white;
   position: relative;
@@ -170,19 +172,39 @@ header h1 {
 }
 
 header p {
-  margin: 8px 0 0;
-  font-size: 15px;
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.95);
   position: relative;
   z-index: 2;
   font-weight: 400;
 }
 
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  header h1 {
+    font-size: 2.25rem;
+  }
+  
+  header p {
+    font-size: 1.05rem;
+  }
+}
+
 /* Theme Toggle */
 .theme-toggle {
   position: absolute;
-  top: 24px;
-  right: 20px;
+  top: 1.5rem;
+  right: 1.25rem;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -190,13 +212,15 @@ header p {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   color: white;
-  font-size: 22px;
+  font-size: 1.375rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 10;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .theme-toggle:hover {
@@ -207,8 +231,8 @@ header p {
 
 .btn-back-home {
   position: absolute;
-  top: 24px;
-  left: 20px;
+  top: 1.5rem;
+  left: 1.25rem;
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -216,13 +240,15 @@ header p {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   color: white;
-  font-size: 22px;
+  font-size: 1.375rem;
   text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 10;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-back-home:hover {
@@ -232,13 +258,35 @@ header p {
 
 
 
+/* ===== MAIN WRAPPER ===== */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
 /* ===== CONTAINER ===== */
 .container {
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
   max-width: 900px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding: 2.5rem 2rem;
+  }
 }
 
 /* ===== GLASSMORPHISM CARDS ===== */
@@ -247,12 +295,26 @@ header p {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 24px;
-  margin-bottom: 20px;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card {
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .card:hover {
@@ -269,18 +331,38 @@ header p {
 /* ===== MENU GRID ===== */
 .menu-grid {
   display: grid;
-  gap: 20px;
-  padding: 24px 16px;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.5rem 1rem;
   max-width: 500px;
   margin: 0 auto;
+  width: 100%;
 }
 
-/* Desktop: 2 kolom untuk layout yang seimbang */
-@media (min-width: 992px) {
+/* Tablet: 2 kolom */
+@media (min-width: 768px) {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
-    gap: 24px;
+    max-width: 700px;
+    gap: 1.25rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Desktop: 3 kolom untuk layout optimal */
+@media (min-width: 992px) {
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    gap: 1.5rem;
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-grid {
+    max-width: 1100px;
+    gap: 2rem;
   }
 }
 
@@ -288,22 +370,25 @@ header p {
   background: var(--bg-card);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 32px 24px;
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem;
   text-align: center;
   text-decoration: none;
   color: var(--text-main);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  font-size: 18px;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.4s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease;
   position: relative;
   overflow: hidden;
-  will-change: transform;
+  min-height: 140px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .menu-card::before {
@@ -329,9 +414,45 @@ header p {
   opacity: 1;
 }
 
-.menu-card span:first-child {
-  font-size: 48px;
+.menu-icon {
+  font-size: 2.5rem;
   filter: drop-shadow(0 4px 8px rgba(13, 148, 136, 0.3));
+  line-height: 1;
+}
+
+.menu-label {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .menu-card {
+    padding: 2.25rem 1.75rem;
+    min-height: 160px;
+  }
+  
+  .menu-icon {
+    font-size: 3rem;
+  }
+  
+  .menu-label {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-card {
+    padding: 2.5rem 2rem;
+    min-height: 170px;
+  }
+  
+  .menu-icon {
+    font-size: 3.25rem;
+  }
+  
+  .menu-label {
+    font-size: 1.1rem;
+  }
 }
 
 /* ===== NEXT PRAYER CARD ===== */
@@ -765,12 +886,13 @@ body::after {
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
-  padding: 32px 20px;
+  padding: 2rem 1.25rem;
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 0.875rem;
   position: relative;
   z-index: 1;
-  margin-top: 40px;
+  margin-top: 2.5rem;
+  width: 100%;
 }
 
 footer::before {
@@ -1317,49 +1439,104 @@ code {
   display: block;
 }
 
-/* ===== CONTAINER JADWAL ===== */
-.container {
-  padding: 24px 16px;
-  max-width: 900px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
 
-@media (min-width: 768px) {
-  .container {
-    padding: 32px 24px;
+
+/* ===== RESPONSIVE MOBILE ===== */
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 1rem;
   }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
+  
   header h1 {
-    font-size: 26px;
+    font-size: 1.5rem;
   }
   
   header p {
-    font-size: 13px;
+    font-size: 0.85rem;
+  }
+  
+  .theme-toggle,
+  .btn-back-home {
+    width: 42px;
+    height: 42px;
+    font-size: 1.25rem;
+    top: 1rem;
+  }
+  
+  .theme-toggle {
+    right: 1rem;
+  }
+  
+  .btn-back-home {
+    left: 1rem;
   }
   
   .menu-card {
-    padding: 28px 20px;
+    padding: 1.5rem 1.25rem;
+    min-height: 130px;
   }
   
-  .menu-card span:first-child {
-    font-size: 40px;
+  .menu-icon {
+    font-size: 2.25rem;
+  }
+  
+  .menu-label {
+    font-size: 0.95rem;
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+  
+  .card h2 {
+    font-size: 1.25rem;
+  }
+  
+  .prayer-table th,
+  .prayer-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
   }
   
   .ayah-arabic {
-    font-size: 22px;
+    font-size: 1.5rem;
   }
   
   .next-prayer-time {
-    font-size: 30px;
+    font-size: 2rem;
   }
   
   .toast {
-    right: 16px;
-    left: 16px;
+    right: 1rem;
+    left: 1rem;
+    bottom: 1rem;
+  }
+  
+  .prayer-checkboxes {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+/* ===== RESPONSIVE TABLET & DESKTOP ===== */
+@media (min-width: 768px) {
+  .prayer-table th,
+  .prayer-table td {
+    padding: 1rem 1rem;
+  }
+  
+  .prayer-checkboxes {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  footer {
+    padding: 2.5rem 1.5rem;
+    font-size: 0.95rem;
   }
 }

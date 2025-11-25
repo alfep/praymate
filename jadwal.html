@@ -2,11 +2,11 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>PrayMate - Jadwal Sholat Hari Ini</title>
+  <title>PrayMate – Jadwal Sholat</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="manifest" href="./manifest.webmanifest">
   <script>
@@ -33,8 +33,8 @@
     <section class="card">
       <h2 id="location-name">Lokasi: -</h2>
       <p id="date-today">Tanggal: -</p>
-      <p style="font-size: 12px; color: #666; margin-top: 8px;">
-        💡 Tip: Ubah metode perhitungan di <a href="./settings.html" style="color: #13837c;">Pengaturan</a>
+      <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">
+        💡 Tip: Ubah metode perhitungan di <a href="./settings.html" style="color: var(--accent);">Pengaturan</a>
       </p>
     </section>
 
@@ -77,23 +77,23 @@
       <h3>📝 Log Sholat Hari Ini</h3>
       <div class="prayer-checkboxes" id="prayer-checkboxes">
         <div class="prayer-checkbox-item" data-prayer="fajr">
-          <input type="checkbox" id="log-fajr">
+          <input type="checkbox" id="log-fajr" aria-label="Log Subuh">
           <label for="log-fajr">Subuh</label>
         </div>
         <div class="prayer-checkbox-item" data-prayer="dhuhr">
-          <input type="checkbox" id="log-dhuhr">
+          <input type="checkbox" id="log-dhuhr" aria-label="Log Dzuhur">
           <label for="log-dhuhr">Dzuhur</label>
         </div>
         <div class="prayer-checkbox-item" data-prayer="asr">
-          <input type="checkbox" id="log-asr">
+          <input type="checkbox" id="log-asr" aria-label="Log Ashar">
           <label for="log-asr">Ashar</label>
         </div>
         <div class="prayer-checkbox-item" data-prayer="maghrib">
-          <input type="checkbox" id="log-maghrib">
+          <input type="checkbox" id="log-maghrib" aria-label="Log Maghrib">
           <label for="log-maghrib">Maghrib</label>
         </div>
         <div class="prayer-checkbox-item" data-prayer="isha">
-          <input type="checkbox" id="log-isha">
+          <input type="checkbox" id="log-isha" aria-label="Log Isya">
           <label for="log-isha">Isya</label>
         </div>
       </div>
@@ -125,9 +125,13 @@
     </section>
 
     <section class="card">
-      <button id="btn-refresh">⟳ Muat Ulang Jadwal</button>
+      <button id="btn-refresh" aria-label="Muat ulang jadwal sholat">⟳ Muat Ulang Jadwal</button>
     </section>
   </main>
+
+  <footer>
+    © PrayMate 2025 — Bantu ibadahmu setiap hari 🤲
+  </footer>
 
   <!-- PENTING: urutannya prayerApi dulu baru app.js -->
   <script src="./js/theme.js"></script>
