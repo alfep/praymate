@@ -73,4 +73,4 @@ python -m http.server 8000
 # Buka http://localhost:8000/ 
 ```
 
-nantikan update lanjutanya
+nantikan update lanjutanya!
