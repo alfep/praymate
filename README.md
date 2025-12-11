@@ -60,7 +60,7 @@ PrayMate adalah aplikasi web pengingat sholat dan Al-Qur'an digital yang membant
 🚀 Cara Menjalankan
 
 🔹 Metode 1 — Langsung di Browser
-`index.html` di browser modern 
+`index.html` di browser mod
 
 🔹 Metode 2 — Live Server (Direkomendasikan)
 ```bash
@@ -71,3 +71,6 @@ bash
 Copy code
 python -m http.server 8000
 # Buka http://localhost:8000/ 
+```
+
+nantikan update lanjutanya
